@@ -146,7 +146,6 @@ ${License}
 ##Bugs
 ${Bugs}
 `;
-})
 
 
 
