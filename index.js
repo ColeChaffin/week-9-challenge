@@ -92,7 +92,7 @@ function init() {
         {
             type: "checkbox",
             name: "licenceChoice",
-            message: "Select license."
+            message: "Select license.",
             choices: [
                 {name: "Apache License", value: "https://www.apache.org/licenses/LICENSE-2.0"},
                 {name: "Boost software license 1.0", value: "https://www.boost.org/LICENSE_1_0.txt)"},
@@ -100,7 +100,7 @@ function init() {
                 {name: "none", value: " "},]
             
             }
-        ])
+            ])
 
 .then((answers) => {
     const {Reason, Title, Contributors, Instructions, Purpose, Learned, Contact, Upcoming, Challenges, Programs, License, Bugs, licenseChoice} = answers;
@@ -146,14 +146,12 @@ ${License}
 ##Bugs
 ${Bugs}
 `;
+})
 
+writeToFile('README.md', layout)
 
-
-
-writeToFile('README.md', layout
-
-    .catch((error) => console.error(error))
-)
+    .catch((error) => console.error(error));
+}
 
 // Function call to initialize app
 init();
